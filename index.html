@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Explorer</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo-text">🎥 Movie Explorer</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#" id="search-link">Search Movies</a></li>
+                    <li><a href="#" id="watchlist-link">Watchlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Movie Search Section -->
+    <section id="search-section" class="search-section">
+        <h2 class="section-title">Find Your Favorite Movies</h2>
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Enter movie title..." class="search-input" required>
+            <!-- <input type="text" id="year-input" placeholder="Year (optional)" class="search-input"> -->
+            <select id="type-select" class="search-input">
+                <option value="">All</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        <div id="movies-grid" class="movies-grid"></div>
+    </section>
+
+    <!-- Movie Details Section -->
+    <section id="details-section" class="details-section" style="display: inline-block;">
+        <button id="back-btn" class="back-button">Back to Search</button>
+        <div id="movie-details"></div>
+        
+        
+    </section>
+
+    <!-- Watchlist Section -->
+    <section id="watchlist-section" class="watchlist-section" style="display: none;">
+        <h2 class="section-title">Your Watchlist</h2>
+        <div id="watchlist-grid" class="movies-grid"></div>
+    </section>
+
+    <script src="movie.js"></script>
+</body>
+</html>
+
